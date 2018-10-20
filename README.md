@@ -24,7 +24,7 @@ context.listener.upZ.setValueAtTime(listenerOrientation.up.z, context.currentTim
 
 const panner = new PannerNode(context, { panningModel: 'HRTF' });
 // point the panner 45 degrees to the right and 15 degrees up
-const pannerOrientation = calculatePannerOrientation(-45, 15);
+const pannerOrientation = calculatePannerOrientation({ heading: -45, pitch: 15 });
 
 panner.orientationX.setValueAtTime(pannerOrientation.x, context.currentTime);
 panner.orientationY.setValueAtTime(pannerOrientation.y, context.currentTime);
@@ -46,6 +46,8 @@ This function takes two arguments, all defaulting to 0:
 and returns an object with properties `x, y, z` corresponding to the
 `PannerNode.{orientationX,orientationY,orientationZ}` parameters.
 
+You can also pass the arguments in a single object.
+
 ### calculateListenerOrientation
 
 This function takes three arguments, all defaulting to 0:
@@ -57,5 +59,7 @@ This function takes three arguments, all defaulting to 0:
 and returns an object with properties `forward, up`,
 each of which has the properties `x, y, z` corresponding to the
 appropriate `PannerNode` parameters.
+
+You can also pass the arguments in a single object.
 
 

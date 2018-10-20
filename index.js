@@ -4,7 +4,10 @@
 //
 // we use trigonometric functions to establish relationships between the vectors
 // and ensure they each circumscribe a sphere as they rotate
-const principalAxesToOrientation = (heading = 0, pitch = 0, roll = 0) => {
+const principalAxesToOrientation = (h = 0, p = 0, r = 0) => {
+  const { heading = 0, pitch = 0, roll = 0 } = typeof h === 'object'
+    ? h
+    : { heading: h, pitch: p, roll: r };
   // vector determining which way the listener is facing
   const forward = {};
   // vector determining the rotation of the listener's head
