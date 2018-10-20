@@ -7,6 +7,7 @@ to forward/up orientation vectors as required by the `AudioListener` and `Panner
 interfaces of the Web Audio API.
 
 ![Aircraft principal axes visualisation](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flight_dynamics_with_text.png/320px-Flight_dynamics_with_text.png)
+[Image source](https://commons.wikimedia.org/wiki/File:Flight_dynamics_with_text.png)
 
 ```
 npm i panner-utils
