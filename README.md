@@ -48,6 +48,11 @@ and returns an object with properties `x, y, z` corresponding to the
 
 You can also pass the arguments in a single object.
 
+*Note: this function assumes that, at no rotation (`{ yaw: 0, pitch: 0 }`),
+the panner is pointing **forward**, i.e. away from the listener. This is to harmonise the rotation
+calculations for both the panner and listener, since by default in Web Audio,
+the Panner is facing 90 degrees to the left.*
+
 ### calculateListenerOrientation
 
 This function takes three arguments, all defaulting to 0:
