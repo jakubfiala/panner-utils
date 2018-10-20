@@ -1,0 +1,25 @@
+{
+  "name": "panner-utils",
+  "version": "0.1.0",
+  "description": "Utility functions to calculate vector values for the Web Audio PannerNode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakubfiala/panner-utils.git"
+  },
+  "keywords": [
+    "web",
+    "audio",
+    "pannernode",
+    "javascript"
+  ],
+  "author": "Jakub Fiala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakubfiala/panner-utils/issues"
+  },
+  "homepage": "https://github.com/jakubfiala/panner-utils#readme"
+}
