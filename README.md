@@ -5,7 +5,7 @@ They convert between rotation around [aircraft principal axes](https://en.wikipe
 to forward/up orientation vectors as required by the `AudioListener` and `PannerNode`
 interfaces of the Web Audio API.
 
-![Aircraft principal axes visualisation](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flight_dynamics_with_text.png/800px-Flight_dynamics_with_text.png)
+![Aircraft principal axes visualisation](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flight_dynamics_with_text.png/320px-Flight_dynamics_with_text.png)
 
 
 ## Usage example
