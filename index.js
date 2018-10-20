@@ -46,7 +46,8 @@ const principalAxesToOrientation = (y = 0, p = 0, r = 0) => {
 
 const calculateListenerOrientation = principalAxesToOrientation;
 // PannerNode orientation is a special case where there's no pitch rotation,
-// i.e. we only calculate the `forward` vector
+// i.e. we only calculate the `forward` vector, and we take into account that
+// by default, the panner is pointing to the right
 const calculatePannerOrientation = (yaw, pitch) =>
   principalAxesToOrientation(yaw, pitch).forward;
 
