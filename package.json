@@ -1,6 +1,6 @@
 {
   "name": "panner-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility functions to calculate vector values for the Web Audio PannerNode",
   "main": "index.js",
   "scripts": {
