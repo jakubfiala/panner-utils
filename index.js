@@ -4,10 +4,10 @@
 //
 // we use trigonometric functions to establish relationships between the vectors
 // and ensure they each circumscribe a sphere as they rotate
-const principalAxesToOrientation = (h = 0, p = 0, r = 0) => {
-  const { heading = 0, pitch = 0, roll = 0 } = typeof h === 'object'
-    ? h
-    : { heading: h, pitch: p, roll: r };
+const principalAxesToOrientation = (y = 0, p = 0, r = 0) => {
+  const { yaw = 0, pitch = 0, roll = 0 } = typeof y === 'object'
+    ? y
+    : { yaw: y, pitch: p, roll: r };
   // vector determining which way the listener is facing
   const forward = {};
   // vector determining the rotation of the listener's head
@@ -16,15 +16,15 @@ const principalAxesToOrientation = (h = 0, p = 0, r = 0) => {
 
   // Heading (a.k.a. Yaw) is the rotation around the Y axis
   // convert to radians first
-  const headingRad = heading * (Math.PI / 180);
+  const yawRad = yaw * (Math.PI / 180);
   // at 0 degrees, the X component should be 0
   //so we calculate it using sin(), which starts at 0
-  forward.x = Math.sin(headingRad);
+  forward.x = Math.sin(yawRad);
   // at 0 degrees, the Z component should be -1,
   // because the negative Z axis points *away from* the listener
   // so we calculate it using cos(), which starts at 1
   // with a phase shift of 90 degrees (or PI radians)
-  forward.z = Math.cos(headingRad + Math.PI);
+  forward.z = Math.cos(yawRad + Math.PI);
 
   // Pitch is the rotation around the X axis
   // we can use it to calculate both vectors' Y components
@@ -47,7 +47,7 @@ const principalAxesToOrientation = (h = 0, p = 0, r = 0) => {
 const calculateListenerOrientation = principalAxesToOrientation;
 // PannerNode orientation is a special case where there's no pitch rotation,
 // i.e. we only calculate the `forward` vector
-const calculatePannerOrientation = (heading, pitch) =>
-  principalAxesToOrientation(heading, pitch).forward;
+const calculatePannerOrientation = (yaw, pitch) =>
+  principalAxesToOrientation(yaw, pitch).forward;
 
 module.exports = { calculatePannerOrientation, calculateListenerOrientation };

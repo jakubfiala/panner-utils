@@ -24,7 +24,7 @@ context.listener.upZ.setValueAtTime(listenerOrientation.up.z, context.currentTim
 
 const panner = new PannerNode(context, { panningModel: 'HRTF' });
 // point the panner 45 degrees to the right and 15 degrees up
-const pannerOrientation = calculatePannerOrientation({ heading: -45, pitch: 15 });
+const pannerOrientation = calculatePannerOrientation({ yaw: -45, pitch: 15 });
 
 panner.orientationX.setValueAtTime(pannerOrientation.x, context.currentTime);
 panner.orientationY.setValueAtTime(pannerOrientation.y, context.currentTime);
@@ -40,7 +40,7 @@ The module exports the following two functions:
 
 This function takes two arguments, all defaulting to 0:
 
-+ `heading` – rotation around the Y axis (in degrees)
++ `yaw` – rotation around the Y axis (in degrees)
 + `pitch` – rotation around the X axis (in degrees)
 
 and returns an object with properties `x, y, z` corresponding to the
@@ -52,7 +52,7 @@ You can also pass the arguments in a single object.
 
 This function takes three arguments, all defaulting to 0:
 
-+ `heading` – rotation around the Y axis (in degrees)
++ `yaw` – rotation around the Y axis (in degrees)
 + `pitch` – rotation around the X axis (in degrees)
 + `roll` - rotation around the Z axis (in degrees)
 
