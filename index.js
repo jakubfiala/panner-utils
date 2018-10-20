@@ -14,7 +14,7 @@ const principalAxesToOrientation = (y = 0, p = 0, r = 0) => {
   // where no rotation means the head is pointing up
   const up = {};
 
-  // Heading (a.k.a. Yaw) is the rotation around the Y axis
+  // Yaw (a.k.a. heading) is the rotation around the Y axis
   // convert to radians first
   const yawRad = yaw * (Math.PI / 180);
   // at 0 degrees, the X component should be 0
