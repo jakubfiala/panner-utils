@@ -1,12 +1,16 @@
 # panner-utils
 
-Utility functions to calculate vector values for the Web Audio PannerNode.
+Utility functions to calculate vector values for the [Web Audio PannerNode](https://developer.mozilla.org/en-US/docs/Web/API/PannerNode).
+
 They convert between rotation around [aircraft principal axes](https://en.wikipedia.org/wiki/Aircraft_principal_axes)
 to forward/up orientation vectors as required by the `AudioListener` and `PannerNode`
 interfaces of the Web Audio API.
 
 ![Aircraft principal axes visualisation](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flight_dynamics_with_text.png/320px-Flight_dynamics_with_text.png)
 
+```
+npm i panner-utils
+```
 
 ## Usage example
 
